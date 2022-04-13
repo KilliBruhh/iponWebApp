@@ -1,0 +1,23 @@
+#footerDiv{
+    border-top: 2px solid black;
+    padding-top: 10px;
+    width: 100%;
+}
+
+#copyrightText {
+    margin: 5px auto;
+    width: 100%;
+    text-align: center;
+    padding-top: 5px;
+    font-size: 80%;
+}
+
+#logoDiv{
+    background-image: url('../header-component/ipponLogo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 73px;
+    height: 63px;
+    margin-top: -10px;
+    float: left;
+}

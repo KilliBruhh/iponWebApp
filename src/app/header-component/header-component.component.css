@@ -1,0 +1,12 @@
+#logoDiv {
+    width: 175px;
+    height: 175px;
+    background-image: url('ipponLogo.jpg');
+    background-size: cover;
+}
+
+
+
+div {
+    font-size: 120%;
+}

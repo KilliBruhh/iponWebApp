@@ -1,0 +1,28 @@
+#containerDiv{
+    margin-top: 100px;
+}
+
+#textENG{
+    font-size: 400%;
+    float: left;
+    margin-left: 150px;
+}
+
+#textJPN{
+    font-size: 400%;
+    float: left;
+    margin-top: 120px;
+    margin-right: 100px;
+}
+
+#imgDiv{
+    background-image: url("Yoi.jpg");
+    border: 1px solid red;
+    width: 557px;
+    height: 370px;
+    float: left;
+}
+
+#fix {
+clear: both;
+}
