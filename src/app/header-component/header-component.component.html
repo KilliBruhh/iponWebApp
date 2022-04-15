@@ -7,13 +7,13 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" aria-current="page" (click)="goToPage('Home')" role="button">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link">Progress</a>
+          <a class="nav-link" (click)="goToPage('progress')"  role="button">Progress</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link">Combos</a>
+            <a class="nav-link" (click)="goToPage('combosView')" role="button">Combos</a>
         </li>
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -28,7 +28,6 @@
           </li>
       </ul>
       <form class="d-flex">
-        <div id="nav-item"><img src="searchIcon.png"></div>
         <input class="form-control btn-outline-dark mx-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
