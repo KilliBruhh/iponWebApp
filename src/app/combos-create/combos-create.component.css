@@ -1,0 +1,35 @@
+#formTag{
+    width: 40%;
+    margin: 5px auto;
+}
+
+#sectionDiv {
+    width: fit-content;
+    margin: 0px auto 20px auto;
+}
+
+#textPar {
+    font-size: 100%;
+}
+
+#goBackButton {
+    font-size: 80%;
+}
+
+form div {
+    text-align: center;
+    width: 65%;
+    margin: 0px auto;
+}
+
+form div label {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+form div input {
+    border: 2px solid gray;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+

@@ -8,6 +8,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { CombosViewComponent } from './combos-view/combos-view.component';
 import { CombosDetailsComponent } from './combos-details/combos-details.component';
 import { CombosCreateComponent } from './combos-create/combos-create.component';
+import { ComboPersonelComponent } from './combo-personel/combo-personel.component';
 
 import { PageNavigationComponent } from './page-navigation/page-navigation.component';
 
@@ -19,7 +20,8 @@ const routes: Routes = [
   { path: 'combosView', component: CombosViewComponent},
   { path: 'combosDetails', component: CombosDetailsComponent},
   { path: 'combosCreate', component: CombosCreateComponent},
-  { path: 'pageNavigation', component: PageNavigationComponent}
+  { path: 'pageNavigation', component: PageNavigationComponent},
+  { path: 'combosPersonel', component: ComboPersonelComponent}
 
 
 ];

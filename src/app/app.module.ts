@@ -11,6 +11,7 @@ import { CombosViewComponent } from './combos-view/combos-view.component';
 import { CombosDetailsComponent } from './combos-details/combos-details.component';
 import { CombosCreateComponent } from './combos-create/combos-create.component';
 import { PageNavigationComponent } from './page-navigation/page-navigation.component';
+import { ComboPersonelComponent } from './combo-personel/combo-personel.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PageNavigationComponent } from './page-navigation/page-navigation.compo
     CombosViewComponent,
     CombosDetailsComponent,
     CombosCreateComponent,
-    PageNavigationComponent
+    PageNavigationComponent,
+    ComboPersonelComponent
   ],
   imports: [
     BrowserModule,
