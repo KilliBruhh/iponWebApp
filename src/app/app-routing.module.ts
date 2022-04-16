@@ -12,6 +12,7 @@ import { ComboPersonelComponent } from './combo-personel/combo-personel.componen
 
 import { PageNavigationComponent } from './page-navigation/page-navigation.component';
 
+import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: 'footer', component: FooterComponentComponent},
   { path: 'header', component: HeaderComponentComponent},
@@ -21,9 +22,8 @@ const routes: Routes = [
   { path: 'combosDetails', component: CombosDetailsComponent},
   { path: 'combosCreate', component: CombosCreateComponent},
   { path: 'pageNavigation', component: PageNavigationComponent},
-  { path: 'combosPersonel', component: ComboPersonelComponent}
-
-
+  { path: 'combosPersonel', component: ComboPersonelComponent},
+  { path: 'profile', component: ProfileComponent}
 ];
 
 @NgModule({

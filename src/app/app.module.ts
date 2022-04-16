@@ -12,6 +12,7 @@ import { CombosDetailsComponent } from './combos-details/combos-details.componen
 import { CombosCreateComponent } from './combos-create/combos-create.component';
 import { PageNavigationComponent } from './page-navigation/page-navigation.component';
 import { ComboPersonelComponent } from './combo-personel/combo-personel.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ComboPersonelComponent } from './combo-personel/combo-personel.componen
     CombosDetailsComponent,
     CombosCreateComponent,
     PageNavigationComponent,
-    ComboPersonelComponent
+    ComboPersonelComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

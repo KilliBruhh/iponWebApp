@@ -10,3 +10,7 @@
 div {
     font-size: 120%;
 }
+
+#searchIcon {
+    margin: 0px 30px;    
+}
