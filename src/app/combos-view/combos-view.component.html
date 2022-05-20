@@ -4,79 +4,36 @@
 <main role="main">
 
   <section class="jumbotron text-center">
-    <div class="container" id="containerDiv">
+    <div class="container border-2" id="containerDiv">
       <h1>Combos</h1>
       <p class="lead text-muted">Here you can find all kinds of combos to learn and add to your Kumite arsenal</p>
       <p>
-        <a class="btn btn-primary my-2" (click)="goToPage('combosCreate')" role="button" id="buttonAlign">Create your own Combo!</a>
-        <a  class="btn btn-secondary my-2" (click)="goToPage('combosPersonel')" role="button">Your Combos</a>
-      </p>
+        <a class="btn btn-outline-dark my-2" id="toCreateButton" role="button" id="buttonAlign" [routerLink]="['/combosCreate']" routerLinkActive="router-link-active" >Create your own Combo!</a>
+<!--         <a  class="btn btn-dark my-2"  role="button" [routerLink]="['/combosPersonel']" routerLinkActive="router-link-active" >Your Combos</a> -->      </p>
     </div>
   </section>
 
   <div class="album py-5 bg-light" id="albumDiv">
     <div class="container" id="albumContainer">
       <div class="row" id="rowDiv">
-
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">Double Punch</text></svg>
-              <div class="card-body">
-                <p class="card-text">A Fast combo to score 1 point</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  </div>
-                  <small class="text-muted">Easy</small>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-            <div class="card mb-4 shadow-sm">
-              <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">Punch And Kick</text></svg>
-              <div class="card-body">
-                <p class="card-text">A Fast combo to score 2 point</p>
-                <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  </div>
-                  <small class="text-muted">Easy</small>
-                </div>
-              </div>
-            </div>
-        </div>
-
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">counter kick</text></svg>
-            <div class="card-body">
-              <p class="card-text">A counter to a kick/punch to score 3 points with a ura mawashi</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                </div>
-                <small class="text-muted">Hard</small>
-              </div>
-            </div>
-          </div>
-      </div>
-
-      <div class="col-md-4">
+      
+      <div *ngFor="let combo of combos" class="col-md-4">
         <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em">Double Kick</text></svg>
+          <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em"> {{ combo.comboName }}</text></svg>
           <div class="card-body">
-            <p class="card-text">A double kick to score 2 points</p>
-            <div class="d-flex justify-content-between align-items-center">
+            <p class="card-text"> {{combo.discription}} </p>
+            <p class="card-text"> {{combo.video}} </p>
+            <div  class="d-flex justify-content-between align-items-center">
               <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="delCombo(combo.id)">Delete</button>
               </div>
-              <small class="text-muted">Medium</small>
             </div>
           </div>
         </div>
-    </div>
+      </div>
+      
+      
 
       </div>
     </div>

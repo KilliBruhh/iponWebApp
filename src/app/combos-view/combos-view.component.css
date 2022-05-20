@@ -2,6 +2,15 @@
   margin-right: 7px;
 }
 
+#toCreateButton {
+  background-color: white;
+}
+
+#containerDiv
+{
+  margin-bottom: -80px;
+  margin-top: -100px;
+}
 
 .jumbotron {
     padding-top: 3rem;

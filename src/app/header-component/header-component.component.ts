@@ -13,10 +13,4 @@ export class HeaderComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-
-  goToPage(pageName:string):void{
-    this.router.navigate([`${pageName}`]);
-  }
-  
-
 }

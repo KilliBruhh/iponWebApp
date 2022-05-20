@@ -7,19 +7,22 @@
         <h3>Create Combo</h3>
         <p class="lead text-muted" id="textPar">Here you can create your own combo. Select the amount of moves per combo and add the move to your combo</p>
         <p>
-            <a class="btn btn-primary my-2" (click)="goToPage('combosView')" role="button" id="goBackButton">Go back to overview!</a>
+            <a class="btn btn-primary my-2" [routerLink]="['/combosView']" routerLinkActive="router-link-active"  role="button" id="goBackButton">Go back to overview!</a>
         </p>
         </div>
     </section>
 </div>
 
 <form id="formTag">
+    <form #addCombosForm="ngForm" (ngSubmit)="onAddCombos()" novalidate>
     <div class="form-group">
         <label for="nameCombo">Name Combo</label>
-        <input type="text" class="form-control" id="nameCombo" placeholder="Name">
-        <label for="discriptionCombo">Discription Combo</label>
-        <input type="text" class="form-control" id="discriptionCombo" placeholder="Discription">
+        <input type="text" class="form-control" id="nameCombo" placeholder="Name" name="nameCombo" [(ngModel)]="nameCombo">
+        <label for="discriptionCombo ">Discription Combo</label>
+        <input type="text" class="form-control" id="discriptionCombo" placeholder="Discription" name="discriptionCombo" [(ngModel)]="discriptionCombo">
         <label for="videoCombo">Video (Youtube link)</label>
-        <input type="text" class="form-control" id="videoCombo" placeholder="Video link">
+        <input type="text" class="form-control" id="videoCombo" placeholder="Video link" name="videoCombo" [(ngModel)]="videoCombo">
+        <button class="btn btn-primary my-2 bg-black" type="submit">Add Combo</button>
     </div>
+    </form>
   </form>

@@ -10,9 +10,6 @@ import { CombosDetailsComponent } from './combos-details/combos-details.componen
 import { CombosCreateComponent } from './combos-create/combos-create.component';
 import { ComboPersonelComponent } from './combo-personel/combo-personel.component';
 
-import { PageNavigationComponent } from './page-navigation/page-navigation.component';
-
-import { ProfileComponent } from './profile/profile.component';
 const routes: Routes = [
   { path: 'footer', component: FooterComponentComponent},
   { path: 'header', component: HeaderComponentComponent},
@@ -21,9 +18,7 @@ const routes: Routes = [
   { path: 'combosView', component: CombosViewComponent},
   { path: 'combosDetails', component: CombosDetailsComponent},
   { path: 'combosCreate', component: CombosCreateComponent},
-  { path: 'pageNavigation', component: PageNavigationComponent},
-  { path: 'combosPersonel', component: ComboPersonelComponent},
-  { path: 'profile', component: ProfileComponent}
+  { path: 'combosPersonel', component: ComboPersonelComponent}
 ];
 
 @NgModule({
