@@ -16,17 +16,16 @@
   <div class="album py-5 bg-light" id="albumDiv">
     <div class="container" id="albumContainer">
       <div class="row" id="rowDiv">
-      
-      <div *ngFor="let combo of combos" class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em"> {{ combo.comboName }}</text></svg>
+      <div *ngFor="let combo of combos" class="col-md-4" id="comboBox">
+        <div class="card mb-4" id="comboCBoxOUtline">
+          <div id="colorDiv"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
           <div class="card-body">
-            <p class="card-text"> {{combo.discription}} </p>
-            <p class="card-text"> {{combo.video}} </p>
+            <p class="card-text"> {{ combo.discription }} </p>
+            <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="delCombo(combo.id)">Delete</button>
+              <div class="card-body btn-group">
+                <button type="button" id="editButton" class="btn btn-outline-warning">Edit</button>
+                <button type="button" id="deleteButton" class="btn btn-outline-danger" (click)="delCombo(combo.id)">Delete</button>
               </div>
             </div>
           </div>
@@ -39,3 +38,6 @@
     </div>
   </div>
 </main>
+
+
+<!-- <app-footer-component class="footer"></app-footer-component> -->
