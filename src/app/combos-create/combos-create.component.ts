@@ -26,6 +26,7 @@ export class CombosCreateComponent implements OnInit {
   validForm = false;
   invalidForm = false;
 
+  // ngIf gebruiken voor form validation
   onAddCombos(addCombosForm: NgForm): void{
     if(!addCombosForm.valid){
       this.invalidForm = true;
