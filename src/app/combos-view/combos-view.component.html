@@ -6,7 +6,6 @@
   <section class="jumbotron text-center">
     <div class="container border-2" id="containerDiv">
       <h1>Combos</h1>
-      <p class="lead text-muted">Here you can find all kinds of combos to learn and add to your Kumite arsenal</p>
       <p>
         <a class="btn btn-outline-dark my-2" id="toCreateButton" role="button" id="buttonAlign" [routerLink]="['/combosCreate']" routerLinkActive="router-link-active" >Create your own Combo!</a>
 <!--         <a  class="btn btn-dark my-2"  role="button" [routerLink]="['/combosPersonel']" routerLinkActive="router-link-active" >Your Combos</a> -->      </p>
@@ -18,25 +17,26 @@
       <div class="row" id="rowDiv">
       <div *ngFor="let combo of combos" class="col-md-4" id="comboBox">
         <div class="card mb-4" id="comboCBoxOUtline">
-          <div id="colorDiv"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
+          <div id="colorDiv" [style.background-color]="combo.colorPicker"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
           <div class="card-body">
             <p class="card-text"> {{ combo.discription }} </p>
             <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
-              <div class="card-body btn-group">
-                <button type="button" id="editButton" class="btn btn-outline-warning">Edit</button>
-                <button type="button" id="deleteButton" class="btn btn-outline-danger" (click)="delCombo(combo.id)">Delete</button>
+              <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
+                <button type="button" id="editButton" class="btn btn-outline-warning border-2">Edit</button>
+                <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" (click)="delCombo(combo.id)">Delete</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      
-
+      </div>      
       </div>
     </div>
   </div>
+
+
+
+
 </main>
 
 

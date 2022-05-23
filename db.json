@@ -2,15 +2,17 @@
   "combos": [
     {
       "id": 1,
-      "comboName": "Test",
-      "discription": "Test",
-      "video": "Test"
+      "comboName": "Domme",
+      "discription": "Tester",
+      "video": "Nikon",
+      "colorPicker": "#fff71a"
     },
     {
       "id": 2,
-      "comboName": "Elle",
-      "discription": "Moeke",
-      "video": "Mokske"
+      "comboName": "Domme",
+      "discription": "Domme",
+      "video": "DINGEN",
+      "colorPicker": "#0ff5c7"
     }
   ]
 }

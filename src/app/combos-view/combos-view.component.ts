@@ -34,6 +34,7 @@ export class CombosViewComponent implements OnInit {
   }
 
   delCombo(val: any){
+    // TODO add popup card to ask if they want to delete the Combo.
     if (confirm("Do you want to Delete your EPIC Combo? (It will be gone forever (LONG TIME)) ")){
     this.serverService.deleteCombo(val).subscribe(
       combo => {});
