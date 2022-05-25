@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { combos } from '../combos';
 import { ServerService } from '../server.service';
 
+
 @Component({
   selector: 'app-combos-view',
   templateUrl: './combos-view.component.html',
@@ -12,8 +13,10 @@ export class CombosViewComponent implements OnInit {
 
   constructor(private router: Router,private serverService: ServerService) { }
 
-
+  confirmDel = true;
+  currentIdOfChosenCombo = 0;
   combos : combos[]= [];
+
   ngOnInit(): void {
     this.getCombosServer();
   }
@@ -33,16 +36,28 @@ export class CombosViewComponent implements OnInit {
       );
   }
 
-  delCombo(val: any){
-    // TODO add popup card to ask if they want to delete the Combo.
-    if (confirm("Do you want to Delete your EPIC Combo? (It will be gone forever (LONG TIME)) ")){
-    this.serverService.deleteCombo(val).subscribe(
+
+  // Modal stuff for deleting combo
+  confirmDeleteCombo(){
+    console.log("confirm del pressed");
+    if (this.confirmDel == true){
+      console.log("Del");
+    this.serverService.deleteCombo(this.currentIdOfChosenCombo).subscribe(
       combo => {});
-    this.serverService.deleteCombo(val).subscribe((response) => {
+    this.serverService.deleteCombo(this.currentIdOfChosenCombo).subscribe((response) => {
       this.combos = response;
     });
+    console.log("Confirmed");
   }
   this.getCombosServer();
   }
-  
+
+  delCombo(val: any){
+    this.currentIdOfChosenCombo = val;
+  }
+
+  // Modal stuff for edeting combo
+  confirmEditCombo(){
+    // Add Stuff
+  }
 }

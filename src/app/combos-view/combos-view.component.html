@@ -1,5 +1,13 @@
 <app-header-component></app-header-component>
 
+<script>
+  
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+
+
 
 <main role="main">
 
@@ -12,7 +20,6 @@
     </div>
   </section>
 
-<!--  Bootstrap model voor popup bij delete -->
   <div class="album py-5 bg-light" id="albumDiv">
     <div class="container" id="albumContainer">
       <div class="row" id="rowDiv">
@@ -25,7 +32,8 @@
             <div  class="d-flex justify-content-between align-items-center">
               <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
                 <button type="button" id="editButton" class="btn btn-outline-warning border-2">Edit</button>
-                <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" (click)="delCombo(combo.id)">Delete</button>
+                <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" data-bs-toggle="modal" data-bs-target="#delete-modal" (click)="delCombo(combo.id)">Delete</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-modal">TEST</button>
               </div>
             </div>
           </div>
@@ -35,8 +43,47 @@
     </div>
   </div>
 
+  
 
 
+<!-- Delete Confirm Model -->
+<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Delete your Combo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you shure u want to delete the combo?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="confirmDelete" data-bs-dismiss="modal"  (click)="confirmDeleteCombo()">Delete</button>
+        <button class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Confirm Model -->
+
+<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Delete your Combo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you shure u want to delete the combo?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="confirmEdit" data-bs-dismiss="modal"  (click)="confirmEditCombo()">Delete</button>
+        <button class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 </main>
 

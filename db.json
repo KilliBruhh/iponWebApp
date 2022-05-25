@@ -1,18 +1,3 @@
 {
-  "combos": [
-    {
-      "id": 1,
-      "comboName": "Domme",
-      "discription": "Tester",
-      "video": "Nikon",
-      "colorPicker": "#fff71a"
-    },
-    {
-      "id": 2,
-      "comboName": "Domme",
-      "discription": "Domme",
-      "video": "DINGEN",
-      "colorPicker": "#0ff5c7"
-    }
-  ]
+  "combos": []
 }
