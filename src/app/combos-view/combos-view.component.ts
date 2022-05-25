@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute ,Router } from '@angular/router';
 import { combos } from '../combos';
 import { ServerService } from '../server.service';
+import { NgForm } from '@angular/forms';
+
+
 
 
 @Component({
@@ -11,7 +14,14 @@ import { ServerService } from '../server.service';
 })
 export class CombosViewComponent implements OnInit {
 
-  constructor(private router: Router,private serverService: ServerService) { }
+  constructor(private router: Router,private serverService: ServerService, private route: ActivatedRoute) { }
+
+  @ViewChild('combosForm') combosForm!: NgForm;
+  idCombo!: any;
+  comboName!: any;
+  discription!: any;
+  video!: any;
+  colorPicker!: any;
 
   confirmDel = true;
   currentIdOfChosenCombo = 0;
@@ -57,7 +67,27 @@ export class CombosViewComponent implements OnInit {
   }
 
   // Modal stuff for edeting combo
-  confirmEditCombo(){
-    // Add Stuff
+  editComboSubmit(){
+    console.log(this.combosForm.value);
+    this.serverService.editCombo(this.currentIdOfChosenCombo, this.combosForm.value).subscribe(
+      (result: any) => {  
+        console.log('combo edited: ', result);              
+      }      
+    )
+    //this.getCombosServer();
+    window.location.reload();
+    //this.currentIdOfChosenCombo = 0;
   }
+
+  fillFormFromDb(val: any){
+    this.serverService.getCombosById(val).subscribe((result: any)=>{      
+      this.comboName = result['comboName'];
+      this.discription = result['discription'];
+      this.video = result['video'];
+      this.colorPicker = result['colorPicker'];    
+      this.currentIdOfChosenCombo = val;
+    });
+
+  }
+
 }

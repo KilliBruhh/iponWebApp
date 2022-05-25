@@ -1,25 +1,11 @@
 {
   "combos": [
     {
-      "id": 1,
-      "comboName": "Test",
-      "discription": "Test",
-      "video": "Test",
-      "colorPicker": "#ff0000"
-    },
-    {
-      "id": 2,
-      "comboName": "qw",
-      "discription": "qwe",
-      "video": "qwe",
-      "colorPicker": "#ff0000"
-    },
-    {
-      "id": 3,
-      "comboName": "qweq",
-      "discription": "eqwee",
-      "video": "qweqwe",
-      "colorPicker": "#ff4242"
+      "comboName": "Gilles",
+      "discription": "Krijgt",
+      "video": "10% op cayo perico",
+      "colorPicker": "#ff0f0f",
+      "id": 1
     }
   ]
 }

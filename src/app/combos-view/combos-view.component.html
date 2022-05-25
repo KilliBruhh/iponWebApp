@@ -31,9 +31,8 @@
             <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
               <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
-                <button type="button" id="editButton" class="btn btn-outline-warning border-2">Edit</button>
+                <button type="button" id="editButton" class="btn btn-outline-warning border-2" data-bs-toggle="modal" data-bs-target="#edit-modal" (click)="fillFormFromDb(combo.id)">Edit</button>
                 <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" data-bs-toggle="modal" data-bs-target="#delete-modal" (click)="delCombo(combo.id)">Delete</button>
-                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-modal">TEST</button>
               </div>
             </div>
           </div>
@@ -70,16 +69,28 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="modal-title">Delete your Combo</h5>
+        <h5 class="modal-title" id="modal-title">Edit your Combo</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Are you shure u want to delete the combo?</p>
+        <form #combosForm="ngForm" (ngSubmit)="editComboSubmit()" novalidate>
+        <div class="form-group">
+            <label for="nameCombo">Name Combo</label>
+            <input type="text" class="form-control" id="comboName" placeholder="Name" name="comboName" required ngModel [(ngModel)]="comboName">
+            <label for="discriptionCombo ">Discription Combo</label>
+            <input type="text" class="form-control" id="discription" placeholder="Discription" name="discription"  required ngModel [(ngModel)]="discription">
+            <label for="videoCombo">Video (link)</label>
+            <input type="text" class="form-control" id="video" placeholder="Video link" name="video" required ngModel [(ngModel)]="video">
+            <label for="colorPicker">Color Combo</label>
+            <input class="form-control" id="colorPicker" type="color" id="colorPicker" name="colorPicker" value="#949494" required ngModel [(ngModel)]="colorPicker">          
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-warning" id="confirmEdit" data-bs-dismiss="modal" type="">Edit</button>
+          <button class="btn btn-secondary" data-bs-dismiss>Close</button>
+        </div>
+        </form>
       </div>
-      <div class="modal-footer">
-        <button class="btn btn-danger" id="confirmEdit" data-bs-dismiss="modal"  (click)="confirmEditCombo()">Delete</button>
-        <button class="btn btn-secondary">Close</button>
-      </div>
+
     </div>
   </div>
 </div>
