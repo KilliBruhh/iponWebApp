@@ -22,13 +22,18 @@ export class ServerService {
       return this.http.post<combos>(url,combos);
     }
 
-    updateCombo(id: any, data: any){
+    editCombo(id: any, data: any){
       const url = 'http://localhost:3000/combos';
-      return this.http.put( `${url}/${id}`, data );
+      return this.http.put(`${url}/${id}`, data );
     }
   
     deleteCombo(id: number): Observable<any>{
       const url = 'http://localhost:3000/combos/' + id;
       return this.http.delete<combos>(url);
+    }
+
+    getCombosById(id: any){
+      const url = 'http://localhost:3000/combos/';
+      return this.http.get( `${url}/${id}` );
     }
 }
