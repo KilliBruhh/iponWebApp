@@ -1,12 +1,19 @@
 <app-header-component></app-header-component>
 
+<script>
+  
+  $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+</script>
+
+
 
 <main role="main">
 
   <section class="jumbotron text-center">
     <div class="container border-2" id="containerDiv">
       <h1>Combos</h1>
-      <p class="lead text-muted">Here you can find all kinds of combos to learn and add to your Kumite arsenal</p>
       <p>
         <a class="btn btn-outline-dark my-2" id="toCreateButton" role="button" id="buttonAlign" [routerLink]="['/combosCreate']" routerLinkActive="router-link-active" >Create your own Combo!</a>
 <!--         <a  class="btn btn-dark my-2"  role="button" [routerLink]="['/combosPersonel']" routerLinkActive="router-link-active" >Your Combos</a> -->      </p>
@@ -16,26 +23,68 @@
   <div class="album py-5 bg-light" id="albumDiv">
     <div class="container" id="albumContainer">
       <div class="row" id="rowDiv">
-      
-      <div *ngFor="let combo of combos" class="col-md-4">
-        <div class="card mb-4 shadow-sm">
-          <svg class="bd-placeholder-img card-img-top" width="100%" height="100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="40%" y="50%" fill="#eceeef" dy=".3em"> {{ combo.comboName }}</text></svg>
+      <div *ngFor="let combo of combos" class="col-md-4" id="comboBox">
+        <div class="card mb-4" id="comboCBoxOUtline">
+          <div id="colorDiv" [style.background-color]="combo.colorPicker"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
           <div class="card-body">
-            <p class="card-text"> {{combo.discription}} </p>
-            <p class="card-text"> {{combo.video}} </p>
+            <p class="card-text"> {{ combo.discription }} </p>
+            <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
-              <div class="btn-group">
-                <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="delCombo(combo.id)">Delete</button>
+              <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
+                <button type="button" id="editButton" class="btn btn-outline-warning border-2">Edit</button>
+                <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" data-bs-toggle="modal" data-bs-target="#delete-modal" (click)="delCombo(combo.id)">Delete</button>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#delete-modal">TEST</button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      
-      
-
+      </div>      
       </div>
     </div>
   </div>
+
+  
+
+
+<!-- Delete Confirm Model -->
+<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Delete your Combo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you shure u want to delete the combo?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="confirmDelete" data-bs-dismiss="modal"  (click)="confirmDeleteCombo()">Delete</button>
+        <button class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Edit Confirm Model -->
+<div class="modal fade" id="edit-modal" tabindex="-1" aria-labelledby="modal-title" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modal-title">Delete your Combo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Are you shure u want to delete the combo?</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" id="confirmEdit" data-bs-dismiss="modal"  (click)="confirmEditCombo()">Delete</button>
+        <button class="btn btn-secondary">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </main>
+
+
+<!-- <app-footer-component class="footer"></app-footer-component> -->

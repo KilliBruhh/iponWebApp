@@ -2,9 +2,24 @@
   "combos": [
     {
       "id": 1,
-      "comboName": "Double Kick",
-      "discription": "2 Fast kicks for double points",
-      "video": "https://www.youtube.com/watch?v=XS2LcpuZcEc"
+      "comboName": "Test",
+      "discription": "Test",
+      "video": "Test",
+      "colorPicker": "#ff0000"
+    },
+    {
+      "id": 2,
+      "comboName": "qw",
+      "discription": "qwe",
+      "video": "qwe",
+      "colorPicker": "#ff0000"
+    },
+    {
+      "id": 3,
+      "comboName": "qweq",
+      "discription": "eqwee",
+      "video": "qweqwe",
+      "colorPicker": "#ff4242"
     }
   ]
 }

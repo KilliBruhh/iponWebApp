@@ -15,28 +15,46 @@ export class CombosCreateComponent implements OnInit {
   nameCombo!: any;
   discriptionCombo!: any;
   videoCombo!: any;
+  colorPicker!: any;
 
   constructor(private ServerService: ServerService) { }
 
   ngOnInit(): void {
   }
 
-  onAddCombos(): void{
-    console.log("Monkey");
-    const newCombo = {
-      id: null,
-      comboName: this.combosForm.value.nameCombo,
-      discription: this.combosForm.value.discriptionCombo,
-      video: this.combosForm.value.videoCombo
+  errorReason:string = "Reason not known";
+  validForm = false;
+  invalidForm = false;
+  $: any;
+
+
+  // ngIf gebruiken voor form validation
+  onAddCombos(addCombosForm: NgForm): void{
+    if(!addCombosForm.valid){
+      this.invalidForm = true;
+      this.errorReason = "Empty fields!";
+      this.validForm = false;
+      return;
     }
-    this.ServerService.addCombo(newCombo).subscribe(
-      (response) => {
-        console.log('combos: ',response);
-        
+    else{     
+      const newCombo = {
+        id: null,
+        comboName: this.combosForm.value.nameCombo,
+        discription: this.combosForm.value.discriptionCombo,
+        video: this.combosForm.value.videoCombo,
+        colorPicker: this.combosForm.value.colorPicker
+
       }
-    ),
-    (error: any) => console.log('error', error);
-    
+      this.ServerService.addCombo(newCombo).subscribe(
+        (response) => {
+          console.log('combos: ',response);
+          this.validForm = true;
+          addCombosForm.reset();
+          this.invalidForm = false;
+        }
+      ),
+      (error: any) => console.log('error', error);
+    }
   }
 
 }
