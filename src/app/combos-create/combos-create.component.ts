@@ -25,13 +25,15 @@ export class CombosCreateComponent implements OnInit {
   errorReason:string = "Reason not known";
   validForm = false;
   invalidForm = false;
+  $: any;
+
 
   // ngIf gebruiken voor form validation
   onAddCombos(addCombosForm: NgForm): void{
     if(!addCombosForm.valid){
       this.invalidForm = true;
       this.errorReason = "Empty fields!";
-
+      this.validForm = false;
       return;
     }
     else{     
@@ -47,6 +49,8 @@ export class CombosCreateComponent implements OnInit {
         (response) => {
           console.log('combos: ',response);
           this.validForm = true;
+          addCombosForm.reset();
+          this.invalidForm = false;
         }
       ),
       (error: any) => console.log('error', error);
