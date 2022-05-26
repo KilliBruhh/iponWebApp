@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { combos } from './combos';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-root',
@@ -10,4 +12,15 @@ export class AppComponent {
   title = 'iponWebApp';
 
   combos : combos[] = [];
+
+  constructor(private router: Router) {}
+
+  ngOnInit(): void {
+
+  }
+
+  goToPage():void{
+    this.router.navigate([`/Home`]);
+  }
+
 }

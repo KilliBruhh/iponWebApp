@@ -77,7 +77,7 @@ export class CombosViewComponent implements OnInit {
       }      
     )
     //this.getCombosServer();
-    window.location.reload();
+  
     //this.currentIdOfChosenCombo = 0;
   }
 
