@@ -42,12 +42,13 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-#editButton, #deleteButton
+#editButton, #deleteButton, #detailsButton
 {
   width: 60%;
   margin: 5px auto;
   border-radius: 7px;
   color: black;
+  font-weight: 600;
 }
 
 

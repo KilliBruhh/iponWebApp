@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CombosDetailsComponent } from './combos-details.component';
+import { ComboDetailsComponent } from './combo-details.component';
 
-describe('CombosDetailsComponent', () => {
-  let component: CombosDetailsComponent;
-  let fixture: ComponentFixture<CombosDetailsComponent>;
+describe('ComboDetailsComponent', () => {
+  let component: ComboDetailsComponent;
+  let fixture: ComponentFixture<ComboDetailsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ CombosDetailsComponent ]
+      declarations: [ ComboDetailsComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CombosDetailsComponent);
+    fixture = TestBed.createComponent(ComboDetailsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

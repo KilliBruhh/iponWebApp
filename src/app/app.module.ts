@@ -6,12 +6,10 @@ import { HeaderComponentComponent } from './header-component/header-component.co
 import { HomeComponentComponent } from './home-component/home-component.component';
 import { FooterComponentComponent } from './footer-component/footer-component.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ProgressComponent } from './progress/progress.component';
 import { CombosViewComponent } from './combos-view/combos-view.component';
-import { CombosDetailsComponent } from './combos-details/combos-details.component';
 import { CombosCreateComponent } from './combos-create/combos-create.component';
-import { ComboPersonelComponent } from './combo-personel/combo-personel.component';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { ComboDetailsComponent } from './combo-details/combo-details.component';
 
 
 
@@ -21,11 +19,9 @@ import { HttpClientModule } from '@angular/common/http'
     HeaderComponentComponent,
     HomeComponentComponent,
     FooterComponentComponent,
-    ProgressComponent,
     CombosViewComponent,
-    CombosDetailsComponent,
     CombosCreateComponent,
-    ComboPersonelComponent,
+    ComboDetailsComponent,
   ],
   imports: [
     BrowserModule,

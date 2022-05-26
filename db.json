@@ -1,11 +1,18 @@
 {
   "combos": [
     {
-      "comboName": "11",
-      "discription": "Krijgt",
-      "video": "10% op cayo perico",
-      "colorPicker": "#836363",
-      "id": 1
+      "id": 1,
+      "comboName": "Item",
+      "discription": "Item",
+      "video": "Item",
+      "colorPicker": "#1d1616"
+    },
+    {
+      "id": 2,
+      "comboName": "Item 2",
+      "discription": "2",
+      "video": "2",
+      "colorPicker": "#fe8616"
     }
   ]
 }

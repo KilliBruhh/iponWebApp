@@ -36,4 +36,9 @@ export class ServerService {
       const url = 'http://localhost:3000/combos/';
       return this.http.get( `${url}/${id}` );
     }
+
+    getCombosByIdDetails(id: any){
+      const url = 'http://localhost:3000/combos';
+      return this.http.get( `${url}/${id}` );
+    }
 }

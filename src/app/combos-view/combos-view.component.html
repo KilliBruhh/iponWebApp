@@ -27,12 +27,15 @@
         <div class="card mb-4" id="comboCBoxOUtline">
           <div id="colorDiv" [style.background-color]="combo.colorPicker"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
           <div class="card-body">
+            <p class="card-title fw-bold  h6">Discription combo:</p>
             <p class="card-text"> {{ combo.discription }} </p>
+            <p class="card-title fw-bold h6">Video link:</p>
             <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
               <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
                 <button type="button" id="editButton" class="btn btn-outline-warning border-2" data-bs-toggle="modal" data-bs-target="#edit-modal" (click)="fillFormFromDb(combo.id)">Edit</button>
                 <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" data-bs-toggle="modal" data-bs-target="#delete-modal" (click)="delCombo(combo.id)">Delete</button>
+                <button type="button" id="detailsButton" class="btn btn-outline-info border-2" [routerLink]="['/combosDetails/',combo.id]" routerLinkActive="router-link-active">Details</button>
               </div>
             </div>
           </div>
