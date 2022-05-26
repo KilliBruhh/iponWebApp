@@ -2,17 +2,10 @@
   "combos": [
     {
       "id": 1,
-      "comboName": "Item",
-      "discription": "Item",
-      "video": "Item",
-      "colorPicker": "#1d1616"
-    },
-    {
-      "id": 2,
-      "comboName": "Item 2",
-      "discription": "2",
-      "video": "2",
-      "colorPicker": "#fe8616"
+      "comboName": "Double Kick",
+      "discription": "A Double kick to distract and strike your aponant",
+      "video": "https://www.youtube.com/watch?v=e9qfasu0DaA",
+      "colorPicker": "#0bfee2"
     }
   ]
 }

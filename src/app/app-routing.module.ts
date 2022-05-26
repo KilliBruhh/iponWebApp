@@ -6,6 +6,7 @@ import { HomeComponentComponent } from './home-component/home-component.componen
 import { CombosViewComponent } from './combos-view/combos-view.component';
 import { CombosCreateComponent } from './combos-create/combos-create.component';
 import { ComboDetailsComponent } from './combo-details/combo-details.component';
+import { StoreComponent } from './store/store.component';
 
 const routes: Routes = [
   { path: 'footer', component: FooterComponentComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   { path: 'Home', component: HomeComponentComponent},
   { path: 'combosView', component: CombosViewComponent},
   { path: 'combosCreate', component: CombosCreateComponent},
-  { path: 'combosDetails/:id', component: ComboDetailsComponent}
+  { path: 'combosDetails/:id', component: ComboDetailsComponent},
+  { path: 'store', component: StoreComponent}
 ];
 
 @NgModule({

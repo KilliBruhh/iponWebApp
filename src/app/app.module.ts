@@ -10,6 +10,9 @@ import { CombosViewComponent } from './combos-view/combos-view.component';
 import { CombosCreateComponent } from './combos-create/combos-create.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComboDetailsComponent } from './combo-details/combo-details.component';
+import { StoreComponent } from './store/store.component';
+import { StoreCardComponent } from './store-card/store-card.component';
+import { EuroToDollarPipe } from './pipes/euro-to-dollar.pipe';
 
 
 
@@ -22,6 +25,9 @@ import { ComboDetailsComponent } from './combo-details/combo-details.component';
     CombosViewComponent,
     CombosCreateComponent,
     ComboDetailsComponent,
+    StoreComponent,
+    StoreCardComponent,
+    EuroToDollarPipe,
   ],
   imports: [
     BrowserModule,

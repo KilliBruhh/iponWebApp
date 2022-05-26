@@ -2,6 +2,11 @@
     margin-top: 100px;
 }
 
+#surDiv{
+    width: fit-content;
+    margin: 0px auto;
+}
+
 #textENG{
     font-size: 400%;
     float: left;
@@ -16,10 +21,8 @@
 }
 
 #imgDiv{
-    background-image: url("Yoi.jpg");
-    width: 557px;
-    height: 370px;
     float: left;
+    border: 3px solid red;
 }
 
 #fix {

@@ -23,6 +23,8 @@ export class CombosViewComponent implements OnInit {
   video!: any;
   colorPicker!: any;
 
+  public name = "Tester";
+
   confirmDel = true;
   currentIdOfChosenCombo = 0;
   combos : combos[]= [];
