@@ -7,7 +7,7 @@
 
 .navBar a{
    float: left;
-   margin-left: 20px;
+   margin-left: 20px; 
    text-decoration: none;
    color: #EEDBCB;
    font-weight: 500;
@@ -24,3 +24,15 @@
     margin-right: 70px;
 }
 
+.searchIcon img {
+    margin-right: 10px;
+}
+
+.searchBar {
+    height: 25px;
+    border-radius: 6px;
+    border: 2px solid #3b8ac3;
+    font-style: italic;
+    font-weight: 100;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
