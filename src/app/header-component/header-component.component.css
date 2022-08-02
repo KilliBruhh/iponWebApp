@@ -1,17 +1,26 @@
-#logoDiv {
-    width: 175px;
-    height: 175px;
-    background-size: cover;
+.navBar {
     float: left;
+    width: 100%;
+    padding: 5px 0px;
+    background-color: #345EA8;
 }
 
-
-
-div {
-    font-size: 120%;
+.navBar a{
+   float: left;
+   margin-left: 20px;
+   text-decoration: none;
+   color: #EEDBCB;
+   font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-#searchIcon {
-    margin: 0px 30px;    
+.navBar a:hover{
+    font-size: 105%;
+    transition: 0.5s;
+}
+
+.searchBar_div{
+    float: right;
+    margin-right: 70px;
 }
 
