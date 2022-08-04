@@ -1,17 +1,50 @@
+#infoBox{
+  margin-top: 70px;
+}
+
+#titletext {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #345ea8;
+  font-weight: bolder;
+}
+
 #buttonAlign {
   margin-right: 7px;
 }
 
-#toCreateButton {
-  background-color: white;
+.createButton {
+  background-color: #4ab4de;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  padding: 5px;
+  border-radius: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 20px;
+  color: #eedbcb;
+  border: 2px solid #345ea8;
 }
 
+#comboBox {
+  width: 20%;
+}
 
+#cardBody{
+}
+
+.createButton:hover {
+  background-color: #345ea8;
+  transition: 0.7s;
+}
 
 #comboCBoxOUtline
 {
   border-radius: 5px;
   background-color: #D1D1D1;
+  font-size: 70%;
+}
+
+#cardDiscription {
 }
 
 #containerDiv
@@ -22,15 +55,15 @@
 #colorDiv 
 {
   border-bottom: 0px black;
-  height: 120px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 /*   background-color: #949494; */  
+  height: 60px;
 }
 
 #albumContainer
 {
-  margin-top: -80px;
+  margin-top: -100px;
 }
 #divComboName
 {
@@ -39,17 +72,26 @@
   width: fit-content;
   font-size: xx-large;
   font-weight: 600;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 140%;
+}
+
+#buttonParentDiv {
+  margin-left: -17.5px;
 }
 
 #editButton, #deleteButton, #detailsButton
 {
-  width: 60%;
+  width: 40%;
   margin: 5px auto;
   border-radius: 7px;
   color: black;
-  font-weight: 600;
+  font-size: 100%;
+  font-weight: bold;
+  margin: 3px;
 }
+
+
 
 
 

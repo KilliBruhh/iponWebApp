@@ -10,11 +10,11 @@
 
 <main role="main">
 
-  <section class="jumbotron text-center">
+  <section class="jumbotron text-center" id="infoBox">
     <div class="container border-2" id="containerDiv">
-      <h3>view your combos!</h3>
+      <h3 id="titletext">YOUR COMBO'S</h3>
       <p>
-        <a class="btn btn-outline-dark my-2" id="toCreateButton" role="button" id="buttonAlign" [routerLink]="['/combosCreate']" routerLinkActive="router-link-active" >Create your own Combo!</a>
+        <button class="createButton"  id="toCreateButton" role="button" id="buttonAlign" [routerLink]="['/combosCreate']" routerLinkActive="router-link-active" >Create your own Combo!</button>
 <!--         <a  class="btn btn-dark my-2"  role="button" [routerLink]="['/combosPersonel']" routerLinkActive="router-link-active" >Your Combos</a> -->      </p>
     </div>
   </section>
@@ -25,14 +25,14 @@
       <div *ngFor="let combo of combos" class="col-md-4" id="comboBox">
         <div class="card mb-4" id="comboCBoxOUtline">
           <div id="colorDiv" [style.background-color]="combo.colorPicker"><div class="card-text" id="divComboName"> {{ combo.comboName }} </div></div>
-          <div class="card-body">
+          <div class="card-body" id="cardBody">
             <p class="card-title fw-bold  h6">Discription combo:</p>
-            <p class="card-text"> {{ combo.discription }} </p>
+            <p class="card-text" id="cardDiscription"> {{ combo.discription }} </p>
             <p class="card-title fw-bold h6">Video link:</p>
             <p class="card-text"> {{ combo.video }} </p>
             <div  class="d-flex justify-content-between align-items-center">
-              <div class="card-body btn-group d-flex flex-sm-column" id="buttonParentDiv">              
-                <button type="button" id="editButton" class="btn btn-outline-warning border-2" data-bs-toggle="modal" data-bs-target="#edit-modal" (click)="fillFormFromDb(combo.id)">Edit</button>
+              <div class="card-body btn-group d-flex flex-sm-row " id="buttonParentDiv">              
+                <button type="button" id="editButton" class="btn btn-outline-warning border-2 h" data-bs-toggle="modal" data-bs-target="#edit-modal" (click)="fillFormFromDb(combo.id)">Edit</button>
                 <button type="button" id="deleteButton" class="btn btn-outline-danger border-2" data-bs-toggle="modal" data-bs-target="#delete-modal" (click)="delCombo(combo.id)">Delete</button>
                 <button type="button" id="detailsButton" class="btn btn-outline-info border-2" [routerLink]="['/combosDetails/',combo.id]" routerLinkActive="router-link-active">Details</button>
               </div>
