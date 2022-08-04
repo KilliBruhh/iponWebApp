@@ -1,8 +1,8 @@
 <div class="navBar">
   <a>LOGO</a>
-  <a href="#">Home</a>
-  <a href="#">Combos</a>
-  <a href="#">Store</a>
+  <a [routerLink]="['/Home']" routerLinkActive="router-link-active">Home</a>
+  <a [routerLink]="['/combosView']" routerLinkActive="router-link-active" href="#">Combos</a>
+  <a [routerLink]="['/store']" routerLinkActive="router-link-active" href="#">Store</a>
   <div class="searchBar_div">
     <a href="#" class="searchIcon"><img src="assets/hourglass.png" width="25px" height="25px"></a>
     <input type="text" value="Search" class="searchBar">

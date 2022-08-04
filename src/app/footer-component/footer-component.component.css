@@ -4,9 +4,7 @@
     position: absolute;
     width: 100%;
     bottom: 0;
-    text-align: center;
     font-size: 80%;
-
 }
 
 .footerNav a {
@@ -20,13 +18,22 @@
     float: left;
 }
 
-.footer_Text {
-    text-align: center;
-    display: inline-block;
-    margin: 0 auto;
-
+.footerNavText {
+    text-align:center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
 }
+
+
 
 .footerNav .footer_Socials{
     float: right;
+}
+
+.footer_Socials img {
+    margin-right: 10px;
+    
 }
