@@ -1,11 +1,11 @@
 {
   "combos": [
     {
-      "id": 1,
       "comboName": "Double Kick",
-      "discription": "A Double kick to distract and strike your aponant",
+      "discription": "A Double kick to distract and strike",
       "video": "https://www.youtube.com/watch?v=e9qfasu0DaA",
-      "colorPicker": "#0bfee2"
+      "colorPicker": "#00ffcc",
+      "id": 1
     }
   ]
 }

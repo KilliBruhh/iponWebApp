@@ -11,7 +11,7 @@ import { StoreComponent } from './store/store.component';
 const routes: Routes = [
   { path: 'footer', component: FooterComponentComponent},
   { path: 'header', component: HeaderComponentComponent},
-  { path: 'Home', component: HomeComponentComponent},
+  { path: 'Home', component: HomeComponentComponent}, 
   { path: 'combosView', component: CombosViewComponent},
   { path: 'combosCreate', component: CombosCreateComponent},
   { path: 'combosDetails/:id', component: ComboDetailsComponent},
