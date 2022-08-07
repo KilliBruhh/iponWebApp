@@ -13,6 +13,7 @@ import { ComboDetailsComponent } from './combo-details/combo-details.component';
 import { StoreComponent } from './store/store.component';
 import { StoreCardComponent } from './store-card/store-card.component';
 import { EuroToDollarPipe } from './pipes/euro-to-dollar.pipe';
+import { SearchFilterPipe } from './search-filter.pipe';
 
 
 
@@ -28,6 +29,7 @@ import { EuroToDollarPipe } from './pipes/euro-to-dollar.pipe';
     StoreComponent,
     StoreCardComponent,
     EuroToDollarPipe,
+    SearchFilterPipe,
   ],
   imports: [
     BrowserModule,
