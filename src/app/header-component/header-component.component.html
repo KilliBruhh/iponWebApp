@@ -5,6 +5,18 @@
   <a [routerLink]="['/store']" routerLinkActive="router-link-active" href="#">Store</a>
   <div class="searchBar_div">
     <a href="#" class="searchIcon"><img src="assets/hourglass.png" width="25px" height="25px"></a>
-    <input type="text" value="Search" class="searchBar">
-  </div>
+    <input type="text" value="Search" class="searchBar" [(ngModel)]="searchFilter" id="listSearch">
+
+
+    <div class="suggestionBox" *ngIf="searchFilter.length > 2" >
+      <div class="card mb-1" *ngFor="let data of combos | searchFilter: searchFilter" id="suggestionCard">
+        <div class="card-body">
+          <h5 class="card-title" [routerLink]="['/combosDetails/',data.id]" routerLinkActive="router-link-active" id="nameCard">{{data.comboName}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{data.discription}}</h6>
+          <p class="card-text">{{data.video}}</p>
+          <div id="colorDiv" [style.background-color]="data.colorPicker"></div>
+        </div>
+      </div>
+    </div>  
+  </div>  
 </div>                                                                     

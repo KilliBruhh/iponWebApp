@@ -89,7 +89,6 @@ export class CombosViewComponent implements OnInit {
       this.colorPicker = result['colorPicker'];    
       this.currentIdOfChosenCombo = val;
     });
-
   }
 
 }
