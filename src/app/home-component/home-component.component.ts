@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { combos } from '../combos';
 
 @Component({
   selector: 'app-home-component',
@@ -12,4 +13,7 @@ export class HomeComponentComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  combo : combos[]= [];
+  
+  combosCount = this.combo.length;
 }

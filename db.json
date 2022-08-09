@@ -2,10 +2,10 @@
   "combos": [
     {
       "id": 1,
-      "comboName": "Combo 1",
-      "discription": "a fast easy combo",
-      "video": "https://www.youtube.com/watch?v=dEWoARiEofY",
-      "colorPicker": "#aeff00"
+      "comboName": "Double Kick",
+      "discription": "Doublwe kick to score 2 points",
+      "video": "https://www.youtube.com/watch?v=iLd2LGZ4ri0",
+      "colorPicker": "#00a8f0"
     }
   ]
 }

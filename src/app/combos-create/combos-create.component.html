@@ -1,5 +1,3 @@
-
-
 <div id="sectionDiv">
     <section class="jumbotron text-center">
         <div class="container" id="containerDiv">
@@ -20,9 +18,9 @@
         <label for="discriptionCombo ">Discription Combo</label>
         <input type="text" class="form-control" id="discriptionCombo" placeholder="Discription" name="discriptionCombo"  required ngModel [(ngModel)]="discriptionCombo">
       <!--   For validating youtube URL
-        https://stackoverflow.com/questions/28735459/how-to-validate-youtube-url-in-client-side-in-text-box -->
+        https://stackoverflow.com/questions/3717115/regular-expression-for-youtube-links -->
         <label for="videoCombo">Video (link)</label>
-        <input type="text" class="form-control" id="videoCombo" placeholder="Video link" name="videoCombo" required ngModel [(ngModel)]="videoCombo">
+        <input type="text" class="form-control" id="videoCombo" placeholder="Video link" name="videoCombo" required ngModel pattern="http(?:s?):\/\/(?:www\.)?youtu(?:be\.com\/watch\?v=|\.be\/)([\w\-\_]*)(&(amp;)?‌​[\w\?‌​=]*)?">
         <label for="colorPicker">Color Combo</label>
         <input class="form-control" id="colorPicker" type="color" id="colorPicker" name="colorPicker" value="#949494" required ngModel [(ngModel)]="colorPicker">
         <button class="btn btn-primary my-2 bg-black" type="submit">Add Combo</button>
