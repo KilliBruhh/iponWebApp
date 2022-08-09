@@ -1,3 +1,11 @@
 {
-  "combos": []
+  "combos": [
+    {
+      "id": 1,
+      "comboName": "Combo 1",
+      "discription": "a fast easy combo",
+      "video": "https://www.youtube.com/watch?v=dEWoARiEofY",
+      "colorPicker": "#aeff00"
+    }
+  ]
 }
