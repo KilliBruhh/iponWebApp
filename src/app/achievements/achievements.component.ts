@@ -8,6 +8,9 @@ import { Component, Input, OnInit } from '@angular/core';
 
 export class AchievementsComponent implements OnInit {
 
+  // Video Gebruikt voor slideshow
+
+
   // constructor() { }
 
   selectedIndex = 0;
@@ -21,6 +24,27 @@ export class AchievementsComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  // press Left button
+  prevBelt(): void {
+    if(this.selectedIndex === 0) {
+      this.selectedIndex = this.images.length - 1;
+    }
+    else {
+      this.selectedIndex--;
+    }
+  }
+
+  // press right button
+  nextBelt(): void {
+    if(this.selectedIndex === this.images.length - 1) {
+      this.selectedIndex = 0;
+    }
+    else {
+      this.selectedIndex++;
+    }
+  }
+
 
   images = [
     {
