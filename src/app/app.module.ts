@@ -15,8 +15,6 @@ import { StoreCardComponent } from './store-card/store-card.component';
 import { EuroToDollarPipe } from './pipes/euro-to-dollar.pipe';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { AchievementsComponent } from './achievements/achievements.component';
-import { BeltCardComponent } from './belt-card/belt-card.component';
-import { SlideshowCardComponent } from './slideshow-card/slideshow-card.component';
 import { CarouselModule } from './carousel/carousel.module';
 
 
@@ -35,8 +33,7 @@ import { CarouselModule } from './carousel/carousel.module';
     EuroToDollarPipe,
     SearchFilterPipe,
     AchievementsComponent,
-    BeltCardComponent,
-    SlideshowCardComponent,
+  
   ],
   imports: [
     BrowserModule,

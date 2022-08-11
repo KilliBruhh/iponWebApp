@@ -1,9 +1,4 @@
-<!-- <div class="information_div">
 
-    <p id="bigTitle">Your Belts</p>
-    <p id="infoText">Here you can see all the Belts. Also when u completed an exam you can check it of by pressing the check button by the belt.</p>
-</div>
- -->
 
  <div *ngIf="images && images.length > 0" class="carousel-container" id="slideDiv">
     <img *ngFor="let image of images; let i=index"
@@ -25,30 +20,6 @@
         <div class="buttonDivRight" (click)="nextBelt()"></div>
     </div>
 
+
+
  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
