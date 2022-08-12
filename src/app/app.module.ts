@@ -14,6 +14,8 @@ import { StoreComponent } from './store/store.component';
 import { StoreCardComponent } from './store-card/store-card.component';
 import { EuroToDollarPipe } from './pipes/euro-to-dollar.pipe';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { AchievementsComponent } from './achievements/achievements.component';
+import { CarouselModule } from './carousel/carousel.module';
 
 
 
@@ -30,12 +32,15 @@ import { SearchFilterPipe } from './search-filter.pipe';
     StoreCardComponent,
     EuroToDollarPipe,
     SearchFilterPipe,
+    AchievementsComponent,
+  
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,9 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'iponWebApp';
 
+
+  
+
   combos : combos[] = [];
 
   constructor(private router: Router) {}

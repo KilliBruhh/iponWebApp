@@ -3,12 +3,11 @@
     background-color: #345ea8;
     width: 100%;
     font-size: 80%;
-
     height: 30px;
     position: fixed;
     bottom: 0;
 
-}
+} 
 
 .footerNav a {
     text-decoration: none;
