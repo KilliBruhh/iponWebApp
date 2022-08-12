@@ -1,8 +1,8 @@
 
 
  <div *ngIf="images && images.length > 0" class="carousel-container" id="slideDiv">
-    <img *ngFor="let image of images; let i=index"
-    [src]="image.imageSrc" [alt]="image.imageAlt"
+    <img *ngFor="let image of belts; let i=index"
+    [src]="image.image"
     [ngClass]="{'image-active': selectedIndex === i}">
 
     <div *ngIf="indicators" class="carousel-dot-container">
@@ -14,7 +14,7 @@
 
     <div *ngIf="controls" class="btn-carousel btn-prev">
         <div class="buttonDivLeft" (click)="prevBelt()"></div>
-    </div>
+    </div> 
     
     <div *ngIf="controls" class="btn-carousel btn-next">
         <div class="buttonDivRight" (click)="nextBelt()"></div>
@@ -22,9 +22,8 @@
 
  </div>
 
-
- <div class="Belt_Information">
-    <p>BELT NAME</p>
-    <strong>The Kata you need to know:</strong><span> KATA NAME</span><br>
-    <label for="check"> <strong>You have this belt:</strong></label><br><input type="checkbox" id="check"> 
+ <div *ngFor="let belt of belts; let i=index" class="Belt_Information" [ngClass]="{'activeBelt': selectedIndex === i}">
+    <p> {{belt.Belt}} </p>
+    <strong>The Kata you need to know:</strong><br><span> {{belt.kata}} </span><br>
+    <label for="check"> <strong>You have this belt:</strong></label><br><input type="checkbox" #check id="check" [checked]="belt.achieved" (change)="checkBelt(check.checked, belt.id, selectedIndex)"> 
 </div>

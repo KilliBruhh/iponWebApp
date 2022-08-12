@@ -117,12 +117,12 @@
 
 .Belt_Information {
     float: right;
-
-    margin-top: -600px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    margin-right: 70px;
+    display: none;
     text-align: center;
     padding: 6px;
+    margin-top: -600px;
+    margin-right: 100px;
     border-radius: 15px;
     box-shadow: 0 6px 12px gray;
 }
@@ -168,4 +168,7 @@ input[type="checkbox"]:checked::after{
 }
 
 
+.activeBelt {
+    display: block;
+}
 

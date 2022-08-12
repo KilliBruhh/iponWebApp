@@ -1,9 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 import { combos } from '../combos';
-import { ActivatedRoute  } from '@angular/router';
 import { ServerService } from '../server.service';
-import { NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-header-component',
@@ -12,14 +10,14 @@ import { NgForm } from '@angular/forms';
 })
 export class HeaderComponentComponent implements OnInit {
 
-  constructor(private router: Router, private serverService: ServerService) { }
+  constructor(private serverService: ServerService) { }
 
   ngOnInit(): void {
     this.getCombosServer();
   }
   public searchFilter: any = '';
 
-  @ViewChild('combosForm') combosForm!: NgForm;
+ 
   idCombo!: any;
   comboName!: any;
   discription!: any;

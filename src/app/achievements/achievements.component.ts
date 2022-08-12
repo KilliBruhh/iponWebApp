@@ -1,4 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { belts } from '../belts';
+import { ServerService } from '../server.service';
+
 
 @Component({
   selector: 'app-achievements',
@@ -11,18 +14,40 @@ export class AchievementsComponent implements OnInit {
   // Video Gebruikt voor slideshow
 
 
-  // constructor() { }
+  constructor(private serverService: ServerService) { }
 
   selectedIndex = 0;
 
   @Input() indicators = true;
   @Input() controls = true;
+  @Input() info = true;
  
   selectedImage(index: number): void{
     this.selectedIndex = index;
   }
 
+  belts : belts[]= [];
+
+  idBelt!: any;
+  nameBelt!: any;
+  imageBelt!: any;
+  kataBelt!: any;
+  achievedBelt!: any;
+
+
   ngOnInit(): void {
+    this.getBeltsFromServer();
+  }
+
+  getBeltsFromServer(): void {
+    this.serverService.getBelts().subscribe(
+      (response: belts[])=>{
+        console.log('combos: ',response)
+        this.belts = response;
+      },
+      (error) => console.log('error: ',error),
+        () => console.log('ready!')
+    );
   }
 
   // press Left button
@@ -45,6 +70,33 @@ export class AchievementsComponent implements OnInit {
     }
   }
 
+  getBeltById(id: any) {
+    this.serverService.getBeltById(id).subscribe((result: any) => {
+      this.nameBelt = result['Belt'];
+      this.imageBelt = result['image'];
+      this.kataBelt = result['kata'];
+      this.achievedBelt = result['achieved'];
+    });
+  }
+
+  // Article used for checking if the box is checked or not.
+  // https://www.codegrepper.com/code-examples/javascript/angular+7+input+checkbox%27%27+%28checked%29
+  checkBelt(checkOrNot: boolean, beltId: any, indexNum: number): void {
+    this.getBeltById(beltId);
+    console.log(this.nameBelt);
+
+    this.achievedBelt = checkOrNot;
+
+   
+    this.serverService.editBelt(beltId, checkOrNot).subscribe (
+      (result: any) => {  
+        console.log('Belt edited: ', result);              
+      }        
+    );
+  }
+
+
+  // TODO --> remove the ngIf with the dummy data (extra time)
 
   images = [
     {

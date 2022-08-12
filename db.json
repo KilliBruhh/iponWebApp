@@ -13,49 +13,49 @@
     {
       "id": 1,
       "Belt": "White",
-      "image": "WhiteObi.png",
+      "image": "assets/WhiteObi.png",
       "kata": "heian Shodan",
-      "achieved": false
+      "achieved": true
     },
     {
       "id": 2,
       "Belt": "Yellow",
-      "image": "YellowObi.png",
+      "image": "assets/YellowObi.png",
       "kata": "Heian nidan",
       "achieved": false
     },
     {
       "id": 3,
       "Belt": "Orange",
-      "image": "OrangeObi.png",
+      "image": "assets/OrangeObi.png",
       "kata": "Heian sandan",
       "achieved": false
     },
     {
       "id": 4,
       "Belt": "Green",
-      "image": "GreenObi.png",
+      "image": "assets/GreenObi.png",
       "kata": "Heian Jondan",
       "achieved": false
     },
     {
       "id": 5,
       "Belt": "Blue",
-      "image": "BlueObi.png",
+      "image": "assets/BlueObi.png",
       "kata": "Heian Godan",
       "achieved": false
     },
     {
       "id": 6,
       "Belt": "Brown",
-      "image": "BrownObi.png",
+      "image": "assets/BrownObi.png",
       "kata": "Bassai Dai",
       "achieved": false
     },
     {
       "id": 7,
       "Belt": "Black",
-      "image": "BlackObi.png",
+      "image": "assets/BlackObi.png",
       "difficulty": "4",
       "kata": "Gankaku, Enpi, Jion",
       "achieved": false

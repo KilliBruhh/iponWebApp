@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { combos } from './combos';
-import { Observable, observable } from 'rxjs';
+import { Observable, observable, retry } from 'rxjs';
+import { belts } from './belts';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class ServerService {
   constructor(private http: HttpClient) {}
 
   combos : combos[] = [];
+  belts : belts[] = [];
 
     getCombos(): Observable<combos[]> {
       const url = "http://localhost:3000/combos";
@@ -41,4 +43,24 @@ export class ServerService {
       const url = 'http://localhost:3000/combos';
       return this.http.get( `${url}/${id}` );
     }
+
+    
+    // Achievement services
+    getBelts(): Observable<belts[]> {
+      const url = "http://localhost:3000/belts";
+      return this.http.get<belts[]>(url);
+    }
+
+    // COuld not get this to work.
+    editBelt(id: any, checkInfo: boolean): Observable<belts> {
+      const url = 'http://localhost:3000/belts/' + id;
+      return this.http.patch<belts>(url, checkInfo);
+      
+    }
+    
+    getBeltById(id: any) {
+      const url = 'http://localhost:3000/belts/';
+      return this.http.get(`${url}/${id}`);
+    }
+
 }
